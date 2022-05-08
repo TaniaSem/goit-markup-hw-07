@@ -21,7 +21,7 @@
 }
 
 
-.hero-modal {
+.modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,7 +36,7 @@
     background-color: var(--primary-bg-color);
 }
 
-.close-btn {
+.modal__close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -61,8 +61,6 @@
     }
 }
 
-
-
 .modal__title {
     font-family: $fontPrimary;
     font-style: normal;
@@ -71,22 +69,22 @@
     color: var(--primary-text-color);
 }
 
-.modal-form {
+.modal__form {
     margin-top: 12px;
 }
 
-.form-field+.form-field {
+.modal__field+.modal__field {
     margin-top: 10px;
 }
 
-.modal-form__label {
+.modal__label {
     font-family: $fontPrimary;
     font-style: normal;
     @include font (null, 12px, 1.17, 0.01em);
     color: var(--secondary-text-color);
 }
 
-.modal-form__input {
+.modal__input {
     width: 100%;
     height: 40px;
     margin-top: 4px;
@@ -107,13 +105,13 @@
     }
 }
 
-.modal-form__input-wrap {
+.modal__wrap {
     position: relative;
 }
 
 
 
-.modal-form__input-image {
+.modal__icon {
     position: absolute;
     left: 0;
     top: 50%;
@@ -121,13 +119,13 @@
     margin-left: 12px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .modal-form__input:focus+& {
+    .modal__input:focus+& {
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         fill: var(--accent-color);
     }
 }
 
-.modal-form__text {
+.modal__comment {
     width: 100%;
     height: 120px;
     resize: none;
@@ -156,7 +154,7 @@
     }
 }
 
-.modal-form__privacy {
+.modal__privacy {
     margin-top: 20px;
     margin-bottom: var(--typical-gap);
     /* position: relative;
@@ -164,7 +162,7 @@
   align-items: center; */
 }
 
-.modal-form__privacy-text {
+.modal__text {
     display: flex;
     align-items: center;
 
@@ -174,7 +172,7 @@
     color: var(--secondary-text-color);
 }
 
-.modal-form__check-span {
+.modal__span {
     content: "";
     width: 16px;
     height: 15px;
@@ -183,19 +181,17 @@
     display: block;
     margin-right: 7px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form__check:focus+.modal-form__privacy-text span {
+.modal__check:focus+.modal__text span {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
 }
 
-.modal-form__check:checked+.modal-form__privacy-text span {
+.modal__check:checked+.modal__text span {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -204,7 +200,7 @@
     border: none;
 }
 
-.modal-form__privacy-file {
+.modal__file {
     color: var(--accent-color);
     text-decoration: underline;
     margin-left: 5px;

@@ -2,10 +2,6 @@
     display: flex;
 }
 
-.about__title {
-    margin-bottom: 50px;
-}
-
 .about__item {
     position: relative;
     &+&{
@@ -13,7 +9,7 @@
     }
 }
 
-.about__list-title {
+.about__title {
     position: absolute;
     width: 100%;
     bottom: 0;
