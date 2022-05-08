@@ -57,7 +57,6 @@
 .footer__title {
     margin-bottom: 20px;
 
-    font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -120,7 +119,7 @@
     padding: 15px 16px;
     margin-right: 12px;
 
-    font-family: Roboto, sans-serif;
+    font-family: $fontPrimary;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -128,7 +127,7 @@
     color: var(--primary-bg-color);
 
     &::placeholder {
-        font-family: Roboto, sans-serif;
+        font-family: $fontPrimary;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;

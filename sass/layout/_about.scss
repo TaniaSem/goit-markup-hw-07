@@ -1,4 +1,4 @@
-.about-list {
+.about__list {
     display: flex;
 }
 
@@ -6,14 +6,14 @@
     margin-bottom: 50px;
 }
 
-.about-list__item {
+.about__item {
     position: relative;
     &+&{
         margin-left: var(--typical-gap);
     }
 }
 
-.about-list__title {
+.about__list-title {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -22,7 +22,6 @@
     padding-bottom: 27px;
     background-color: rgba(47, 48, 58, 0.8);
 
-    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
